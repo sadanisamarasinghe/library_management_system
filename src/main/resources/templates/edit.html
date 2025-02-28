@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Store</title>
+</head>
+<body>
+	<form action="/add" method="post" th:object="${entity}">
+		<input type="hidden" th:field="${entity.id}">
+		<input type="text" name="name" placeholder="Book Name" th:field="${entity.name}">
+		<input type="text" name="status" placeholder="Book Status" th:field="${entity.status}">
+		<button type="submit">Update</button>
+	</form>
+	
+	<a href="/manage">Back to list</a>
+</body>
+</html>
